@@ -5,7 +5,40 @@ import taxiHeroMobile from "@/assets/taxi-hero-mobile.jpg";
 
 const HeroSection = () => {
   const handleCall = () => {
-    window.location.href = "tel:+7XXXXXXXXXX";
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      // Плавная прокрутка с кастомной анимацией
+      const targetPosition = contactSection.offsetTop - 80; // Отступ сверху
+      const startPosition = window.pageYOffset;
+      const distance = targetPosition - startPosition;
+      const duration = 800; // 0.8 секунды для быстрого но плавного перехода
+      let start: number | null = null;
+
+      const animation = (currentTime: number) => {
+        if (start === null) start = currentTime;
+        const timeElapsed = currentTime - start;
+        const progress = Math.min(timeElapsed / duration, 1);
+        
+        // Easing function для красивой анимации (easeInOutCubic)
+        const ease = progress < 0.5 
+          ? 4 * progress * progress * progress 
+          : 1 - Math.pow(-2 * progress + 2, 3) / 2;
+        
+        window.scrollTo(0, startPosition + distance * ease);
+        
+        if (timeElapsed < duration) {
+          requestAnimationFrame(animation);
+        } else {
+          // После завершения прокрутки добавляем подсветку
+          contactSection.classList.add('contact-highlight');
+          setTimeout(() => {
+            contactSection.classList.remove('contact-highlight');
+          }, 400);
+        }
+      };
+      
+      requestAnimationFrame(animation);
+    }
   };
 
   return (

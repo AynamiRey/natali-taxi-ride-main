@@ -120,7 +120,31 @@ All colors MUST be HSL.
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply bg-background text-foreground;
+  }
+
+  /* Анимация появления раздела контактов */
+  .contact-highlight {
+    animation: contactPulse 0.4s ease-out;
+  }
+
+  @keyframes contactPulse {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 0 0 0 rgba(220, 185, 35, 0.4);
+    }
+    50% {
+      transform: scale(1.02);
+      box-shadow: 0 0 0 10px rgba(220, 185, 35, 0.1);
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: 0 0 0 0 rgba(220, 185, 35, 0);
+    }
   }
 }
