@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Phone, Car, Users, Star } from "lucide-react";
-import taxiHeroImage from "@/assets/taxi-hero.jpg";
+import taxiHeroImage from "@/assets/taxi-hero.png";
 
 const HeroSection = () => {
   const handleCall = () => {

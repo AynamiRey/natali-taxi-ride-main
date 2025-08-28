@@ -3,8 +3,12 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Phone } from "lucide-react";
 
 const ContactSection = () => {
-  const handleCall = () => {
-    window.location.href = "tel:+7XXXXXXXXXX";
+  const handleCall1 = () => {
+    window.location.href = "tel:+79684181518";
+  };
+
+  const handleCall2 = () => {
+    window.location.href = "tel:+79152186582";
   };
 
   return (
@@ -29,17 +33,15 @@ const ContactSection = () => {
                 </div>
                 
                 <div className="space-y-3 sm:space-y-4">
-                  <div className="text-center py-3 sm:py-4 bg-taxi-light rounded-lg cursor-pointer hover:bg-taxi-blue/5 transition-colors" onClick={handleCall}>
-                    <p className="text-xs sm:text-sm text-muted-foreground mb-1 sm:mb-2">Основной номер</p>
+                  <div className="text-center py-3 sm:py-4 bg-taxi-light rounded-lg cursor-pointer hover:bg-taxi-blue/5 transition-colors" onClick={handleCall1}>
                     <p className="text-2xl sm:text-3xl font-bold text-taxi-blue">
-                      +7 (XXX) XXX-XX-XX
+                      +7 (968) 418-15-18
                     </p>
                   </div>
                   
-                  <div className="text-center py-3 sm:py-4 bg-taxi-light rounded-lg cursor-pointer hover:bg-taxi-blue/5 transition-colors" onClick={handleCall}>
-                    <p className="text-xs sm:text-sm text-muted-foreground mb-1 sm:mb-2">Дополнительный номер</p>
+                  <div className="text-center py-3 sm:py-4 bg-taxi-light rounded-lg cursor-pointer hover:bg-taxi-blue/5 transition-colors" onClick={handleCall2}>
                     <p className="text-2xl sm:text-3xl font-bold text-taxi-blue">
-                      +7 (XXX) XXX-XX-XX
+                      +7 (915) 218-65-82
                     </p>
                   </div>
                 </div>
@@ -48,7 +50,7 @@ const ContactSection = () => {
                   variant="taxi" 
                   className="w-full mt-4 sm:mt-6 text-base sm:text-lg md:text-xl px-6 sm:px-8 py-4 sm:py-5 bg-taxi-gold hover:bg-yellow-400 text-taxi-dark font-bold shadow-2xl hover:shadow-3xl transition-all duration-300 border-2 border-taxi-gold hover:border-yellow-400 rounded-xl" 
                   size="lg" 
-                  onClick={handleCall}
+                  onClick={handleCall1}
                 >
                   <Phone className="mr-3 h-5 w-5 sm:h-6 sm:w-6" />
                   <span className="font-bold tracking-normal">Заказать такси сейчас</span>
