@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Phone, Car, Users, Star } from "lucide-react";
 import taxiHeroImage from "@/assets/taxi-hero.jpg";
+import taxiHeroMobile from "@/assets/taxi-hero-mobile.jpg";
 
 const HeroSection = () => {
   const handleCall = () => {
@@ -10,9 +11,15 @@ const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-gradient-hero overflow-hidden">
       <div className="absolute inset-0 bg-black/30 z-10"></div>
+      {/* Desktop background */}
       <div 
-        className="absolute inset-0 bg-cover bg-center z-0"
+        className="absolute inset-0 bg-cover bg-center z-0 hidden sm:block"
         style={{ backgroundImage: `url(${taxiHeroImage})` }}
+      ></div>
+      {/* Mobile background - мобильное изображение */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center z-0 sm:hidden"
+        style={{ backgroundImage: `url(${taxiHeroMobile})` }}
       ></div>
       
       <div className="relative z-20 text-center text-white px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto pt-20 sm:pt-16 lg:pt-0">
