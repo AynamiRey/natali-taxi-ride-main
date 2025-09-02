@@ -50,7 +50,7 @@ const ContactSection = () => {
                 
                 <div className="space-y-4">
                   {/* Первый номер */}
-                  <div className="text-center py-3 sm:py-4 bg-taxi-light rounded-lg">
+                  <div className="text-center py-3 sm:py-4 bg-taxi-light rounded-lg cursor-pointer hover:bg-taxi-blue/5 transition-colors" onClick={handleCall1}>
                     <p className="text-2xl sm:text-3xl font-bold text-taxi-blue mb-3">
                       +7 (968) 418-15-18
                     </p>
@@ -73,7 +73,7 @@ const ContactSection = () => {
                   </div>
                   
                   {/* Второй номер */}
-                  <div className="text-center py-3 sm:py-4 bg-taxi-light rounded-lg">
+                  <div className="text-center py-3 sm:py-4 bg-taxi-light rounded-lg cursor-pointer hover:bg-taxi-blue/5 transition-colors" onClick={handleCall2}>
                     <p className="text-2xl sm:text-3xl font-bold text-taxi-blue mb-3">
                       +7 (915) 218-65-82
                     </p>
