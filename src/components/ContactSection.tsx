@@ -20,11 +20,11 @@ const ContactSection = () => {
   };
 
   const handleTelegram1 = () => {
-    window.open("https://t.me/+79684181518", "_blank");
+    window.open("https://t.me/79684181518", "_blank");
   };
 
   const handleTelegram2 = () => {
-    window.open("https://t.me/+79152186582", "_blank");
+    window.open("https://t.me/79152186582", "_blank");
   };
 
   return (
