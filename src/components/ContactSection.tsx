@@ -30,20 +30,18 @@ const ContactSection = () => {
 
   const handleTelegram1 = (e: React.MouseEvent) => {
     e.stopPropagation();
-    // Используем правильный формат для Telegram с номером телефона
-    const phoneNumber = "+79684181518";
-    const message = "Здравствуйте! Хочу заказать такси";
-    const telegramUrl = `https://t.me/share/url?url=${encodeURIComponent(`tel:${phoneNumber}`)}&text=${encodeURIComponent(message)}`;
-    window.open(telegramUrl, "_blank");
+    window.location.href = "tg://resolve?domain=79684181518";
+    setTimeout(() => {
+      window.open("https://t.me/79684181518", "_blank");
+    }, 500);
   };
 
   const handleTelegram2 = (e: React.MouseEvent) => {
     e.stopPropagation();
-    // Используем правильный формат для Telegram с номером телефона
-    const phoneNumber = "+79152186582";
-    const message = "Здравствуйте! Хочу заказать такси";
-    const telegramUrl = `https://t.me/share/url?url=${encodeURIComponent(`tel:${phoneNumber}`)}&text=${encodeURIComponent(message)}`;
-    window.open(telegramUrl, "_blank");
+    window.location.href = "tg://resolve?domain=79152186582";
+    setTimeout(() => {
+      window.open("https://t.me/79152186582", "_blank");
+    }, 500);
   };
 
   return (
