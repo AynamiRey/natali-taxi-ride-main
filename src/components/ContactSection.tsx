@@ -30,17 +30,17 @@ const ContactSection = () => {
 
   const handleTelegram1 = (e: React.MouseEvent) => {
     e.stopPropagation();
-    window.location.href = "tg://resolve?domain=79684181518";
+    window.location.href = "tg://resolve?domain=Sergey20102018";
     setTimeout(() => {
-      window.open("https://t.me/79684181518", "_blank");
+      window.open("https://t.me/Sergey20102018", "_blank");
     }, 500);
   };
 
   const handleTelegram2 = (e: React.MouseEvent) => {
     e.stopPropagation();
-    window.location.href = "tg://resolve?domain=79152186582";
+    window.location.href = "tg://resolve?domain=Nataliportman2018";
     setTimeout(() => {
-      window.open("https://t.me/79152186582", "_blank");
+      window.open("https://t.me/Nataliportman2018", "_blank");
     }, 500);
   };
 
