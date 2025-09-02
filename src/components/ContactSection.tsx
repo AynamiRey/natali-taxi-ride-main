@@ -11,20 +11,37 @@ const ContactSection = () => {
     window.location.href = "tel:+79152186582";
   };
 
-  const handleWhatsApp1 = () => {
-    window.open("https://wa.me/79684181518", "_blank");
+  const handleWhatsApp1 = (e: React.MouseEvent) => {
+    e.stopPropagation(); // Предотвращаем всплытие события
+    window.location.href = "whatsapp://send?phone=79684181518";
+    // Фоллбэк для веб-версии
+    setTimeout(() => {
+      window.open("https://wa.me/79684181518", "_blank");
+    }, 500);
   };
 
-  const handleWhatsApp2 = () => {
-    window.open("https://wa.me/79152186582", "_blank");
+  const handleWhatsApp2 = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    window.location.href = "whatsapp://send?phone=79152186582";
+    setTimeout(() => {
+      window.open("https://wa.me/79152186582", "_blank");
+    }, 500);
   };
 
-  const handleTelegram1 = () => {
-    window.open("https://t.me/79684181518", "_blank");
+  const handleTelegram1 = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    window.location.href = "tg://resolve?domain=79684181518";
+    setTimeout(() => {
+      window.open("https://t.me/79684181518", "_blank");
+    }, 500);
   };
 
-  const handleTelegram2 = () => {
-    window.open("https://t.me/79152186582", "_blank");
+  const handleTelegram2 = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    window.location.href = "tg://resolve?domain=79152186582";
+    setTimeout(() => {
+      window.open("https://t.me/79152186582", "_blank");
+    }, 500);
   };
 
   return (
