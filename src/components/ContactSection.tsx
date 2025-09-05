@@ -127,7 +127,7 @@ const ContactSection = () => {
                   onClick={handleCall1}
                 >
                   <Phone className="mr-3 h-5 w-5 sm:h-6 sm:w-6" />
-                  <span className="font-bold tracking-normal">Заказать поездку от 100 км</span>
+                  <span className="font-bold tracking-normal">Заказать такси сейчас</span>
                 </Button>
               </CardContent>
             </Card>
