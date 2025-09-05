@@ -11,28 +11,11 @@ const ContactSection = () => {
     window.location.href = "tel:+79152186582";
   };
 
-  const handleWhatsApp1 = (e: React.MouseEvent) => {
-    e.stopPropagation(); // Предотвращаем всплытие события
-    window.location.href = "whatsapp://send?phone=79684181518";
-    // Фоллбэк для веб-версии
-    setTimeout(() => {
-      window.open("https://wa.me/79684181518", "_blank");
-    }, 500);
-  };
-
   const handleWhatsApp2 = (e: React.MouseEvent) => {
     e.stopPropagation();
     window.location.href = "whatsapp://send?phone=79152186582";
     setTimeout(() => {
       window.open("https://wa.me/79152186582", "_blank");
-    }, 500);
-  };
-
-  const handleTelegram1 = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    window.location.href = "tg://resolve?domain=Sergey20102018";
-    setTimeout(() => {
-      window.open("https://t.me/Sergey20102018", "_blank");
     }, 500);
   };
 
@@ -75,25 +58,9 @@ const ContactSection = () => {
                 <div className="space-y-4">
                   {/* Первый номер */}
                   <div className="text-center py-3 sm:py-4 bg-taxi-light rounded-lg cursor-pointer hover:bg-taxi-blue/5 transition-colors" onClick={handleCall1}>
-                    <p className="text-2xl sm:text-3xl font-bold text-taxi-blue mb-3">
+                    <p className="text-2xl sm:text-3xl font-bold text-taxi-blue">
                       +7 (968) 418-15-18
                     </p>
-                    <div className="flex justify-center space-x-3 mt-3">
-                      <button
-                        onClick={handleWhatsApp1}
-                        className="flex items-center space-x-2 px-4 py-2 bg-green-500 hover:bg-green-600 text-white rounded-lg transition-colors text-sm font-medium"
-                      >
-                        <MessageCircle className="h-4 w-4" />
-                        <span>WhatsApp</span>
-                      </button>
-                      <button
-                        onClick={handleTelegram1}
-                        className="flex items-center space-x-2 px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg transition-colors text-sm font-medium"
-                      >
-                        <Send className="h-4 w-4" />
-                        <span>Telegram</span>
-                      </button>
-                    </div>
                   </div>
                   
                   {/* Второй номер */}
