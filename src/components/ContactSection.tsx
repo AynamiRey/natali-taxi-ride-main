@@ -51,9 +51,16 @@ const ContactSection = () => {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-taxi-dark mb-4 sm:mb-6">
             Свяжитесь с нами
           </h2>
-          <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto px-4">
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto px-4 mb-6">
             Заказать такси просто! Звоните, пишите в WhatsApp или Telegram
           </p>
+          
+          {/* Важная информация о дистанции */}
+          <div className="inline-flex items-center bg-taxi-gold/10 border border-taxi-gold/30 rounded-lg px-6 py-3 text-taxi-dark">
+            <span className="font-semibold text-base sm:text-lg">
+              ⚡ Специализируемся на поездках от 100 км
+            </span>
+          </div>
         </div>
 
         <div className="flex justify-center">
@@ -120,7 +127,7 @@ const ContactSection = () => {
                   onClick={handleCall1}
                 >
                   <Phone className="mr-3 h-5 w-5 sm:h-6 sm:w-6" />
-                  <span className="font-bold tracking-normal">Заказать такси сейчас</span>
+                  <span className="font-bold tracking-normal">Заказать поездку от 100 км</span>
                 </Button>
               </CardContent>
             </Card>

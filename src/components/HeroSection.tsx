@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Phone, Car, Users, Star } from "lucide-react";
+import { Phone, Car, Users, Star, MapPin } from "lucide-react";
 import taxiHeroImage from "@/assets/taxi-hero.jpg";
 import taxiHeroMobile from "@/assets/taxi-hero-mobile.jpg";
 
@@ -85,6 +85,21 @@ const HeroSection = () => {
             <p className="text-xl sm:text-2xl md:text-3xl font-medium drop-shadow-md text-white/95">
               По всей России и новым территориям
             </p>
+            
+            {/* Важная информация о минимальной дистанции */}
+            <div className="bg-taxi-gold/90 backdrop-blur-sm rounded-xl p-4 sm:p-6 mx-4 sm:mx-8 border-2 border-yellow-300 shadow-2xl">
+              <div className="flex items-center justify-center space-x-3">
+                <MapPin className="h-6 w-6 sm:h-8 sm:w-8 text-taxi-dark" />
+                <div className="text-center">
+                  <p className="text-taxi-dark font-bold text-lg sm:text-xl md:text-2xl">
+                    Поездки от 100 км
+                  </p>
+                  <p className="text-taxi-dark/80 font-medium text-sm sm:text-base">
+                    Межгород и дальние расстояния
+                  </p>
+                </div>
+              </div>
+            </div>
             
             <div className="flex flex-wrap justify-center gap-2 sm:gap-4 text-sm sm:text-base md:text-lg text-taxi-gold font-semibold">
               <span className="bg-black/20 backdrop-blur-sm px-3 py-1 rounded-full">Опытные водители</span>
