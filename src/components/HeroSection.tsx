@@ -62,11 +62,8 @@ const HeroSection = () => {
               <div className="absolute -inset-4 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 shadow-2xl"></div>
               <div className="relative px-6 py-4 sm:px-8 sm:py-6">
                 <h1 className="text-center leading-tight">
-                  <span className="block text-white font-light tracking-[0.25em] text-lg sm:text-xl md:text-2xl lg:text-3xl mb-1 opacity-90 drop-shadow-lg">
-                    ТАКСИ
-                  </span>
                   <span className="block bg-gradient-to-r from-taxi-gold via-yellow-300 to-taxi-gold bg-clip-text text-transparent drop-shadow-2xl font-black tracking-wider transform hover:scale-105 transition-transform duration-300 text-5xl sm:text-6xl md:text-7xl lg:text-8xl">
-                    НАТАЛИ
+                    КЕШАТАКСИ
                   </span>
                 </h1>
               </div>
@@ -82,20 +79,21 @@ const HeroSection = () => {
           </div>
           
           <div className="space-y-3 sm:space-y-4 mb-8 sm:mb-10">
-            <p className="text-xl sm:text-2xl md:text-3xl font-medium drop-shadow-md text-white/95">
-              По всей России и новым территориям
-            </p>
             
             {/* Важная информация о минимальной дистанции */}
             <div className="bg-taxi-gold/90 backdrop-blur-sm rounded-xl p-4 sm:p-6 mx-4 sm:mx-8 border-2 border-yellow-300 shadow-2xl">
-              <div className="flex items-center justify-center space-x-3">
-                <MapPin className="h-6 w-6 sm:h-8 sm:w-8 text-taxi-dark" />
+              <div className="flex flex-col items-center justify-center space-y-3">
+                <div className="flex items-center space-x-3">
+                  <MapPin className="h-6 w-6 sm:h-8 sm:w-8 text-taxi-dark" />
+                  <div className="text-center">
+                    <p className="text-taxi-dark font-bold text-lg sm:text-xl md:text-2xl">
+                      Междугородние поездки от 100 км
+                    </p>
+                  </div>
+                </div>
                 <div className="text-center">
-                  <p className="text-taxi-dark font-bold text-lg sm:text-xl md:text-2xl">
-                    Поездки от 100 км
-                  </p>
-                  <p className="text-taxi-dark/80 font-medium text-sm sm:text-base">
-                    Межгород и дальние расстояния
+                  <p className="text-taxi-dark font-semibold text-sm sm:text-base">
+                    🛡️ Из и в зону СВО • По всей России и новым территориям
                   </p>
                 </div>
               </div>

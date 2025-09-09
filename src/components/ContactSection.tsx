@@ -35,10 +35,15 @@ const ContactSection = () => {
           </p>
           
           {/* Важная информация о дистанции */}
-          <div className="inline-flex items-center bg-taxi-gold/10 border border-taxi-gold/30 rounded-lg px-6 py-3 text-taxi-dark">
-            <span className="font-semibold text-base sm:text-lg">
-              ⚡ Специализируемся на поездках от 100 км
-            </span>
+          <div className="bg-taxi-gold/10 border border-taxi-gold/30 rounded-lg px-6 py-4 text-taxi-dark max-w-2xl mx-auto">
+            <div className="text-center space-y-2">
+              <span className="font-bold text-base sm:text-lg block">
+                ⚡ Междугородние поездки от 100 км
+              </span>
+              <span className="font-medium text-sm sm:text-base block">
+                🛡️ Из и в зону СВО
+              </span>
+            </div>
           </div>
         </div>
 
